@@ -1,0 +1,14 @@
+section.section#sectionAbout
+
+	.container
+
+		mixin aboutListItem(headline, text)
+			li.about-list__item
+				h3.about-list__headline !{headline}
+				p.about-list__text !{text}
+
+		ul.about-list
+			+aboutListItem('Прокачиваем мир', 'Вы&nbsp;хотите сделать мир лучше и&nbsp;не&nbsp;готовы ждать всю жизнь, чтобы начать это делать?')
+			+aboutListItem('Мотивируем себя', 'У&nbsp;вас есть собственная цель и&nbsp;вы&nbsp;не&nbsp;боитесь много работать, чтобы её&nbsp;достичь?')
+			+aboutListItem('Используем лучшее', 'Вы&nbsp;способны применять разные подходы для достижения своих целей?')
+			+aboutListItem('Относимся с&nbsp;пониманием', 'Вы&nbsp;не&nbsp;обвиняете других в&nbsp;свои неудачах и&nbsp;способны воспринимать критику?')

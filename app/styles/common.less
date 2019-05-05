@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: @fontDinPro;
+	font-size: 16px;
+	// color: @colorWhite;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: none;
+	position: relative;
+}
+
+a {
+	color: @colorOrange;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+svg {
+	fill-rule: evenodd;
+	outline: none;
+}
+
+input {
+	font-family: @fontRoboto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.color-black {
+	color: @colorBlack;
+}
+
+.color-white {
+	color: @colorWhite;
+}
+
+.color-orange {
+	color: @colorOrange;
+}
+
+.color-red {
+	color: @colorRed;
+}
+
+.nobr {
+	white-space: nowrap;
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+	// @media only screen and (max-width: 320px) {
+
+	// }
+	// @media only screen and (max-width: 480px) {
+
+	// }
+	// @media only screen and (max-width: 768px) {
+
+	// }
+	// @media only screen and (max-width: 992px) {
+
+	// }
+	// @media only screen and (max-width: 1024px) {
+
+	// }
+	@media only screen and (max-width: 1200px) {
+		width: auto;
+	}
+}
+
+.section {
+	padding: 100px 0;
+}

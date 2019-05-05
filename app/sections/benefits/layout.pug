@@ -1,0 +1,19 @@
+section.section#sectionBenefits
+
+	.container
+
+		h2.headline.headline_secondary.text-center Приемущества работы с&nbsp;нами
+
+		mixin benefitsListItem(icon, headline, text)
+			li.benefits-list__item
+				.benefits-list__header
+					.benefits-list__icon
+						svg
+							use(xlink:href="img/sprite.min.svg#" + icon)
+					h3.benefits-list__headline !{headline}
+				p.benefits-list__text !{text}
+
+		ul.benefits-list
+			+benefitsListItem('icon-purse', 'Делимся опытом и&nbsp;навыками', 'Мы&nbsp;обучаем коллег всему, что знаем сами. Наш опыт уникален и&nbsp;проверен временем, а&nbsp;команда постоянно совершенствует свои знания и&nbsp;навыки.')
+			+benefitsListItem('icon-purse', 'Стабильная зарплата', 'Вы&nbsp;без задержек получаете официальную зарплату. Также мы&nbsp;оплачиваем больничные и&nbsp;даем возможность брать оплачиваемый отпуск до&nbsp;4&nbsp;недель в&nbsp;год.')
+			+benefitsListItem('icon-purse', 'Гибкий график', 'Мы&nbsp;умеем работать с&nbsp;теми, кто еще не&nbsp;закончил получать образование. Вы&nbsp;можете работать неполный рабочий день, брать отгулы на&nbsp;время сессии и&nbsp;диплома.')

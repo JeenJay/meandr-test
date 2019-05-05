@@ -1,0 +1,98 @@
+#sectionBenefits {
+	padding: 120px 0 160px 0;
+	background: #f7f5fa;
+	@media only screen and (max-width: 480px) {
+		padding: 50px 0;
+	}
+	@media only screen and (max-width: 768px) {
+		padding: 100px 0;
+	}
+}
+
+.benefits-list {
+	.reset-list();
+	display: flex;
+	@media only screen and (max-width: 320px) {
+		padding: 0 20px;
+	}
+	@media only screen and (max-width: 768px) {
+		display: block;
+		padding: 0 60px;
+	}
+	&__item {
+		display: block;
+		margin-right: 60px;
+		&:nth-child(3n),
+		&:last-child {
+			margin-right: 0;
+		}
+		@media only screen and (max-width: 320px) {
+			margin-bottom: 30px;
+		}
+		@media only screen and (max-width: 768px) {
+			margin-right: 0;
+			margin-bottom: 60px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__header {
+		margin-bottom: 27px;
+		@media only screen and (max-width: 768px) {
+			display: flex;
+			align-items: center;
+			margin-bottom: 17px;
+		}
+	}
+
+	&__icon {
+		width: 52px;
+		height: 52px;
+		margin-bottom: 30px;
+		@media only screen and (max-width: 768px) {
+			width: 36px;
+			height: 36px;
+			margin: 0 18px 0 0;
+		}
+		svg {
+			width: 52px;
+			height: 52px;
+			fill: @colorOrange;
+			@media only screen and (max-width: 768px) {
+				width: 36px;
+				height: 36px;
+			}
+		}
+	}
+
+	&__headline {
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 25px;
+		margin: 0 0 0 0;
+		&::after {
+			display: block;
+			content: "";
+			width: 24px;
+			height: 2px;
+			font-size: 0;
+			margin-top: 25px;
+			background: @colorOrange;
+			@media only screen and (max-width: 768px) {
+				display: none;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 26px;
+		margin: 0 0 16px 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+}

@@ -1,0 +1,26 @@
+section.section#sectionFeedback
+
+	.container
+
+		h2.headline.headline_secondary.text-center.color-white Теперь расскажите о&nbsp;себе
+
+		form.form#formFeedback(action="#")
+
+			.field
+				label.field__label(for="formFeedbackUserName") Фамилия и&nbsp;имя
+				input.field__text#formFeedbackUserName(type="text", name="feedbackUserName", data-validate-field="feedbackUserName", placeholder="Введите текст", value="Максимов Дмитрий")
+
+			.field
+				label.field__label(for="formFeedbackUserEmail") Электронная почта
+				input.field__text#formFeedbackUserEmail(type="email", name="feedbackUserEmail", data-validate-field="feedbackUserEmail" placeholder="Введите адрес электронной почты", value="jeendsgn@gmail.com")
+
+			.field
+				label.field__label(for="formFeedbackUserPhone") Телефон
+				input.field__text#formFeedbackUserPhone(type="tel", name="feedbackUserPhone", data-validate-field="feedbackUserPhone" placeholder="Введите номер телефона", value="+7 (962) 409-45-50")
+
+			.field
+				label.field__label(for="formFeedbackUserMessage") Какой деятельностью, не&nbsp;связанной с&nbsp;текущими проектами, вы&nbsp;бы хотели заниматься в&nbsp;рабочее время?
+				textarea.field__text#formFeedbackUserMessage(name="feedbackUserMessage", data-validate-field="feedbackUserMessage" placeholder="Введите текст") Работа с SVG графикой, изучение и применение Canvas (HTML) и SPA фреймворков
+
+			button.button.button_block.button_white#formFeedbackSend(type="submit")
+				span Отправить

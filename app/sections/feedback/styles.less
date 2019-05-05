@@ -1,0 +1,61 @@
+#sectionFeedback {
+	padding: 100px 0 120px 0;
+	background: #161616;
+	@media only screen and (max-width: 480px) {
+		padding: 50px 0;
+	}
+	@media only screen and (max-width: 768px) {
+		padding: 100px 0;
+	}
+
+	.form {
+		width: 758px;
+		padding: 20px 92px 0 92px;
+		margin: 0 auto;
+		counter-reset: fields;
+		@media only screen and (max-width: 480px) {
+			padding: 0;
+		}
+		// @media only screen and (max-width: 768px) {
+		// 	width: 90%;
+		// }
+		.field {
+			&__label {
+				position: relative;
+				cursor: pointer;
+				&::before {
+					position: absolute;
+					left: -92px;
+					top: 50%;
+					transform: translateY(-50%);
+					z-index: 10;
+					width: 64px;
+					height: 64px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: @colorOrange;
+					font-family: @fontRoboto;
+					font-weight: 500;
+					font-size: 20px;
+					border-radius: 50%;
+					border: 1px solid fade(@colorWhite, 30%);
+					counter-increment: fields;
+					content: counter(fields);
+					.transition-out();
+					@media only screen and (max-width: 480px) {
+						display: none;
+					}
+				}
+			}
+			&:hover .field__label::before {
+				border-color: @colorWhite;
+			}
+			&.is-focused .field__label::before {
+				border-color: @colorWhite;
+				background: @colorWhite;
+				.transition-in();
+			}
+		}
+	}
+}
